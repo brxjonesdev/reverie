@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reverie 
 
-## Getting Started
+A Progressive Web App for capturing and organizing musical ideas. Record melodies, write lyrics, and build song structures — all in your browser.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Phase 1: Core Capture
+- Audio recording with waveform visualization
+- Lyrics editor with section markers (Verse, Chorus, Bridge)
+- Speech-to-text transcription for lyrics
+- Real-time pitch detection for melody capture
+- Tag songs with emojis
+- Search by keywords and tags
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Phase 2: Creative Tools
+- Chord progression generator (presets + custom)
+- BPM detection
+- Song structure builder (drag-and-drop sections)
+- Time-stamped comments on recordings
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS
+- **Audio:** Web Audio API, Tone.js
+- **Pitch Detection:** Pitchy
+- **Waveforms:** Wavesurfer.js
+- **Storage:** IndexedDB (via idb)
+- **PWA:** next-pwa
 
-## Learn More
+## Recording Modes
 
-To learn more about Next.js, take a look at the following resources:
+**Lyrics Mode:** Captures spoken/sung words and transcribes to text
+- Uses Web Speech API for real-time transcription
+- Perfect for capturing lyrical ideas on the fly
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Melody Mode:** Detects pitch and converts humming/singing to MIDI notes
+- Real-time pitch detection shows current note
+- Captures note sequences with timing and duration
+- Monophonic (one note at a time)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Both Mode:** Records audio while simultaneously transcribing lyrics AND detecting melody
 
-## Deploy on Vercel
+## Roadmap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Phase 3 (Future)
+- Multi-track recording
+- Custom rhythm builder
+- In-app mixing (levels, EQ, reverb)
+- Export to MIDI/audio files
+- Cloud sync
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+Contributions welcome! Please open an issue first to discuss what you'd like to change.
+
+## License
+
+MIT
